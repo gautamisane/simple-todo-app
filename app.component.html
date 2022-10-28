@@ -1,0 +1,14 @@
+<h1> Hello, My First! {{dynamic}} {{title}}</h1>
+<p> {{getVal()}} </p>
+<p> {{2 + 2}}</p>
+<p> {{ num  == 100 }}</p>
+<!-- interpolation-->
+<input type="text" placeholder="enter new task" #task />
+<br>
+<br>
+<button (click)="addTask(task.value)">add new task</button> 
+<br>
+<br>
+<ul *ngFor = "let item of list">
+    <li>{{item.name}} <button (click)="removeTask(item.id)">remove task</button></li>
+</ul>
